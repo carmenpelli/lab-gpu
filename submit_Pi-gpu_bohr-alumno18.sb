@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -p bohr-gpu
+#SBATCH --chdir=/home/alumno18/lab-gpu/
+#SBATCH --job-name=pi_gpu
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+
+module load anaconda/2025.06
+
+ipython pi-gpu-alumno18.ipynb $1
+
+module unload anaconda/2025.06
+
